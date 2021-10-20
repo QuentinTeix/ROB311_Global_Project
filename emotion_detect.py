@@ -1,10 +1,14 @@
 import cv2
+import time
 from fer import FER
 from test import simple_detection, full_detection
 
 video = cv2.VideoCapture(0)
 
 print(video)
+
+print("WAITING FOR THE CAMERA")
+time.sleep(2)
 
 while True:
     check, frame = video.read()
